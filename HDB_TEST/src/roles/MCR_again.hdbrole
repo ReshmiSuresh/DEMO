@@ -1,3 +1,4 @@
 {
 	"role":{
 		"name": "MCR",
+		"schema_privileges": [{
