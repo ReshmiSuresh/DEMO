@@ -15,6 +15,13 @@ modules:
       - name: sflight-grantor2
 
 
+
+  - name: db
+    type: hdb
+    path: db
+    requires:
+     - name: hdi_db
+
 resources:
   - name: hdi-container
     parameters:
@@ -29,4 +36,13 @@ resources:
         service-name: sflight-grantor2
 
      
+
+
+  - name: hdi_db
+    parameters:
+       config:
+          schema: DUBAI
+    properties:
+       hdi-container-name: ${service-name}
+    type: com.sap.xs.hdi-container
 
